@@ -1,7 +1,6 @@
 package views;
 
 import java.awt.BorderLayout;
-import java.awt.Color;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -9,6 +8,9 @@ import javax.swing.JPanel;
 public class MainFrame extends JFrame {
     JPanel mainPanel;
     TrackPanel trackPanel;
+    ResultPanel resultPanel;
+    public ButtonPanel buttonPanel;
+
     public MainFrame() {
         this.setMainComponent();
         this.setMainPanel();
@@ -16,10 +18,12 @@ public class MainFrame extends JFrame {
     }
     private void setMainComponent() {
         this.trackPanel = new TrackPanel();
+        this.resultPanel = new ResultPanel();
+        this.buttonPanel = new ButtonPanel();
     }
     private void setMainPanel() {
         this.mainPanel = new JPanel();
-        this.mainPanel.setBackground(Color.BLUE);
+        //this.mainPanel.setBackground(Color.BLUE);
         this.mainPanel.setSize(100, 100);
         this.mainPanel.add(this.trackPanel);
 
