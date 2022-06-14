@@ -7,7 +7,7 @@ import javax.swing.JPanel;
 
 public class MainFrame extends JFrame {
     JPanel mainPanel;
-    TrackPanel trackPanel;
+    public TrackPanel trackPanel;
     ResultPanel resultPanel;
     public ButtonPanel buttonPanel;
 
@@ -23,9 +23,10 @@ public class MainFrame extends JFrame {
     }
     private void setMainPanel() {
         this.mainPanel = new JPanel();
-        //this.mainPanel.setBackground(Color.BLUE);
         this.mainPanel.setSize(100, 100);
         this.mainPanel.add(this.trackPanel);
+        this.mainPanel.add(this.resultPanel);
+        this.mainPanel.add(this.buttonPanel);
 
         this.mainPanel.setLayout(null);
     }
